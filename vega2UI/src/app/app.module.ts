@@ -10,7 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import { NavmenuComponent } from './components/navmenu/navmenu.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { FetchdataComponent } from './components/fetchdata/fetchdata.component';
-import { MakeService } from './services/make.service';
+import { VehicleService } from './services/vehicle.service';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MakeService } from './services/make.service';
     FetchdataComponent
   ],
   imports: [
-    HttpClientModule,
+
+  HttpClientModule,
     FormsModule,
 
   BrowserModule,
@@ -34,7 +36,7 @@ import { MakeService } from './services/make.service';
       { path: 'fetch-data', component: FetchdataComponent },
     ])
   ],
-  providers: [MakeService],
+  providers: [VehicleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
